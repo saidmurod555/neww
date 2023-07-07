@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>BOBOMURODOV SAIDMUROD ID7824</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h2>Dunyoning qayerida?</h2>
+      <div class="theme-box" onclick="toggleTheme()">
+        <ion-icon name="moon-outline"></ion-icon>
+        <p id="dark-mode-text">Tungi rejim</p>
+      </div>
+    </header>
+
+    <main class="main">
+      <form class="input-form" id="input-form">
+        <input type="text" id="search" name="search" placeholder="Qidiruv..." />
+        <select
+          name="regions"
+          id="regions"
+          placeholder="Filter by region"
+          onchange="selectRegions()"
+        >
+          <option value="placeholder" disabled selected>
+            Mintaqaga qarab filtrlash
+          </option>
+          <option value="africa">Afrika</option>
+          <option value="america">Amerika</option>
+          <option value="asia">Osio</option>
+          <option value="europe">Europa</option>
+          <option value="oceania">Okian</option>
+        </select>
+      </form>
+
+      <section class="countries-box" id="countries-box"></section>
+    </main>
+
+    <section class="details-section">
+      <input type="button" value="Back" onclick="back()" class="back-btn" />
+      <div class="details-grid">
+        <div class="details-flag">
+          <img src="https://flagcdn.com/de.svg" />
+        </div>
+        <div class="text-grid">
+          <h3></h3>
+
+          <p>Davlat nomi : <span class="native-name"></span></p>
+
+          <p>Mintaqa :<span class="region"></span></p>
+
+          <p>poytaxti : <span class="capital"></span></p>
+
+          <p>Valyuta : <span class="currencies"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
